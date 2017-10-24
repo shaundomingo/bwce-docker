@@ -1,0 +1,15 @@
+---
+kind: "BuildConfig"
+apiVersion: "v1"
+metadata:
+  name: "bwce-docker" 
+spec:
+  runPolicy: "Serial"
+  source: 
+    type: "Binary"
+  strategy: 
+    type: "Docker"
+  output: 
+    to:
+      kind: "ImageStreamTag"
+      name: "bwce:latest"
